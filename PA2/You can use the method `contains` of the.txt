@@ -1,0 +1,17 @@
+You can use the method `contains` of the `ArrayList` class in Java to check whether a variable exists in a clause. Instead of calling `contains` directly on the `Clause` object, you can access the `variables` property of the `Clause` object and check whether it contains the given variable. Here is the updated code for the `countOccurrences` method:
+
+```
+private int countOccurrences(Assignment assignment, Variable variable) {
+    int count = 0;
+
+    for (int i = 0; i < assignment.problem.clauses.size(); i++) {
+        if (assignment.problem.clauses.get(i).variables.contains(variable)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+```
+
+This code will check whether the given variable exists in the `variables` property of each clause in the `ArrayList` of clauses. If it exists, the `count` variable will be incremented. Finally, the method will return the count of occurrences of the variable.
