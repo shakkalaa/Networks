@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author shaka
+ *
+ */
+module tester {
+}
